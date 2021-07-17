@@ -1,0 +1,241 @@
+.title {
+    font-size: 40px;    
+    line-height: 41px;    
+    letter-spacing: 3.89px;
+    margin-top: 88px;
+    color: $white;
+}
+
+.selectArea {
+    margin-top: 96px;
+    height: 48px;
+    width: 452px;
+    background-color: rgba(255, 255, 255, 0.70);
+    border: 3px solid $white;
+    border-radius: 3px;
+    font-size: 18px;
+    line-height: 21px;
+    color: $black;
+    line-height: 21px;
+    padding-left: 8px;
+}
+
+.popularArea {
+    background: $white;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.20);
+    border-radius: 5px;
+    max-width: 800px;
+    text-align: center;
+    margin: 80px auto 0 auto;
+    font-size: 18px;
+    h2 {
+        font-size: 18px;
+        color: $black;
+        padding-top: 20px;
+        padding-bottom: 14px;
+        font-size: 24px;
+    }
+    ul {
+        font-size: 20px;
+        color: $white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 42px;
+            width: 130px;
+            border-radius: 5px;
+            margin-right: 16px;
+            margin-left: 16px;
+            margin-bottom: 18px;
+            color: $white;
+        }
+    }
+}
+
+@each $color,
+$value in $theme-colors {
+    .text-#{$color} {
+        color: $value;
+    }
+    .bg-#{$color} {
+        background-color: $value;
+    }
+}
+
+@while $num <= $grid {
+    .col {
+        flex: 1 0 0%;
+        &-#{$num} {
+            flex: 0 0 auto;
+            width: ($num / $grid) * 100%;
+        }
+    }
+    @media (max-width: 992px) {
+        .col-md {
+            flex: 1 0 0%;
+            &-#{$num} {
+                flex: 0 0 auto;
+                width: ($num / $grid) * 100%;
+            }
+        }
+    }
+    @media (max-width: 576px) {
+        .col-sm {
+            flex: 1 0 0%;
+            &-#{$num} {
+                flex: 0 0 auto;
+                width: ($num / $grid) * 100%;
+            }
+        }
+    }
+    $num: $num+1;
+}
+
+.line {
+    height: 1px;
+    margin: 0 auto;
+    margin-top: 49px;
+    background-image: linear-gradient(to right, $blue 0%, $blue 50%, transparent 50%);
+    background-size: 15px 10px;
+    background-repeat: repeat-x;
+    position: relative;
+    background-color: $white;
+    .fas {
+        position: absolute;
+        top: -12px;
+        height: 24px;
+        width: 24px;
+        box-sizing: border-box;
+        border: 2px solid $blue;
+        border-radius: 100%;
+        background-color: $white;
+        color: $blue;
+        padding-top: 3px;
+        transform: translateX(-50%);
+    }
+}
+
+.mainAreaName {
+    margin-top: 76px;
+    font-size: 36px;
+    line-height: 43px;
+    color: $purple;
+}
+
+.list {
+    margin: 24px 32px 0 32px;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap; 
+    height: 100%;
+    text-align: left;
+    line-height: 18px;
+    @media (max-width: 992px) {
+        justify-content: center;
+    }
+    @media (max-width: 576px) {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .card {        
+        position: relative;
+        box-sizing: border-box;
+        margin-bottom: 36px;
+        padding: 0 8px;
+        display: flex;
+        .areaData {
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.20);
+            flex-grow: 1;
+        }
+        .img {
+            height: 155px;
+            overflow: hidden;
+            img {
+                width: 100%;
+                margin-top: -56px;
+            }
+        }
+        .name,
+        .areaName {
+            position: absolute;
+            color: $white;
+           
+        }
+        .name {
+            top: 120px;
+            left: 24px;
+            font-size: 24px;
+        }
+        .areaName {
+            top: 125px;
+            right: 24px;
+            font-size: 16px;
+        }
+        .info {
+            margin: 24px 24px 0px 24px;
+            display: flex;
+            align-items: flex-start;
+            flex-grow: 1;
+            font-size: 16px;
+            @media (max-width: 576px) {
+                padding-left: 16px;
+            }
+            div {
+                display: flex;
+                flex-direction: column;
+                padding-right: 8px;
+            }
+            p {
+                margin-bottom: 16px;
+                display: flex;
+            }
+            .fas {
+                padding-right: 9px;
+                width: 18px;
+                text-align: center;
+            }
+            .tag {
+                white-space: nowrap;
+                align-self: flex-end;
+            }
+        }
+    }
+}
+
+.fa-clock {
+    color: $purple;
+}
+
+.fa-map-marker-alt {
+    color: $orange;
+}
+
+.fa-mobile-alt {
+    color: $blue;
+}
+
+.fa-tag {
+    color: $yellow;
+}
+
+.page {
+    margin-top: 48px;
+    font-size: 14px;
+    >* {
+        height: 24px;
+        width: 24px;
+        margin-left: 4px;
+        margin-right: 4px;
+    }
+    .next,
+    .prev {
+        width: 50px;
+        margin-left: 24px;
+        margin-right: 24px;
+    }
+}

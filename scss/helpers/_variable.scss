@@ -1,0 +1,29 @@
+$white: #fff;
+$purple: #8A82CC;
+$yellow: #F5D005;
+$pink: #FFA782;
+$blue: #559AC8;
+$orange: rgb(245, 166, 35);
+$black: #000;
+
+$theme-colors:(
+    'white': #fff,
+    'purple': #8A82CC,
+    'yellow': #F5D005,
+    'pink': #FFA782,
+    'blue': #559AC8,
+    'orange': rgb(245, 166, 35),
+    'black': #000,
+);
+
+$num: 1;
+$grid: 12;
+
+
+$dispalys: (
+    'flex': flex,
+    'inline': inline,
+    'block': block,
+    'none': none,
+);
+

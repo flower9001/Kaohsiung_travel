@@ -1,0 +1,50 @@
+body {
+    background-image: url('../images/Hero.png');
+    background-size: 100% 380px;
+    background-repeat: no-repeat;
+    text-align: center;
+    font-family: 'SFNSDisplay', sans-serif;
+}
+
+header, main {
+    @include container;
+}
+
+select {
+    appearance: none;
+    background: url('../images/icons_down.png') no-repeat calc(100% - 16px) center;
+}
+
+a {
+    text-decoration: none;
+	color: #4A4A4A;  
+}
+
+ul {
+    list-style: none;
+}
+
+p, h1, h2, ul {
+    margin: 0;
+    padding: 0;
+}
+
+footer {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    margin-top: 40px;
+    background: $blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: $yellow;
+    font-size: 14px;
+    p {
+        margin: 0;
+    }
+    p:nth-child(1) {
+        color: $white;
+        padding-bottom: 16px;
+    }
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>高雄旅遊資訊</title>
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="shortcut icon" href="./images/Hero.png" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <h1 class="title">高雄旅遊資訊</h1>
+        <select class="selectArea col-sm-11">
+            <option value="- - 請選擇行政區- -">- - 請選擇行政區- -</option>
+        </select>
+        <div class="popularArea col-md-11">
+            <h2>熱門行政區</h2>
+            <ul class="d-flex">
+                <li><a href="#" class="bg-purple col-md-6">苓雅區</a></li>
+                <li><a href="#" class="bg-pink col-md-6">三民區</a></li>
+                <li><a href="#" class="bg-yellow col-md-6">新興區</a></li>
+                <li><a href="#" class="bg-blue col-md-6">鹽埕區</a></li>
+            </ul>
+        </div>
+        <div class="line">
+            <i class="fas fa-caret-down fa-lg"></i>
+        </div>
+    </header>
+    
+    <main>
+        <h2 class="mainAreaName">
+            <i class="fas fa-spinner fa-spin"></i><br><p>載入中</p>
+        </h2>
+        
+        <article class="list">
+        </article>
+        <div class="page">
+        </div>
+    </main>
+    <footer>
+        <p>高雄旅遊網</p>
+        <p>資料來源：高雄市政府 </p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js/all.js"></script>
+</body>
+
+</html>
