@@ -10,7 +10,6 @@ const page = document.querySelector('.page');
 // axios.get('https://raw.githubusercontent.com/hexschool/KCGTravel/master/datastore_search.json')
 axios.get('https://raw.githubusercontent.com/hexschool/KCGTravel/master/datastore_search.json')
     .then(function(response) {
-        console.log(response.data)
         const webData = response.data.result.records;
         let arr = [];
         let areaNameArray = []
@@ -127,9 +126,12 @@ function showArea(area, pageNum) {
 // select area
 selectArea.addEventListener('change', function(e) {
     nowPage = 1;
-    if (selectArea.value == '- - 請選擇行政區- -') {
+    if (selectArea.value == '- - 顯示全部資料 - -') {
+        mainAreaName.innerHTML = '高雄市全區';
+        showArea('all', nowPage);
         return;
-    }
+    } 
+    
     mainAreaName.textContent = selectArea.value;
     showArea(selectArea.value, nowPage);
 });
