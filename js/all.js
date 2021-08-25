@@ -7,10 +7,10 @@ const popularArea = document.querySelector('.popularArea');
 const page = document.querySelector('.page');
 
 // 使用 axios 串接外部資料
+axios.get('https://api.kcg.gov.tw/api/service/get/9c8e1450-e833-499c-8320-29b36b7ace5c')
 // axios.get('https://raw.githubusercontent.com/hexschool/KCGTravel/master/datastore_search.json')
-axios.get('https://raw.githubusercontent.com/hexschool/KCGTravel/master/datastore_search.json')
     .then(function(response) {
-        const webData = response.data.result.records;
+        const webData = response.data.data.XML_Head.Infos.Info;
         let arr = [];
         let areaNameArray = []
 
@@ -20,7 +20,7 @@ axios.get('https://raw.githubusercontent.com/hexschool/KCGTravel/master/datastor
             info.Opentime = item.Opentime;
             info.Add = item.Add;
             info.Tel = item.Tel;
-            info.Area = item.Zone;
+            info.Area = item.Add.substr(6, 3);
             info.Picture = item.Picture1;
             if (item.Ticketinfo == '免費' || item.Ticketinfo == '' || item.Ticketinfo == '免費入園') {
                 info.Ticketinfo = '免費參觀';
